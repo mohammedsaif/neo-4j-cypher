@@ -79,6 +79,25 @@ MATCH (s:Student {id: "S005"}), (p:Project {id: "P004"})
 CREATE (s)-[:BUILT]->(p);
 
 
+MATCH (p:Project {id: "P001"}), (s:Skill {id: "SK001"})
+CREATE (p)-[:USES]->(s);
+
+MATCH (p:Project {id: "P001"}), (s:Skill {id: "SK004"})
+CREATE (p)-[:USES]->(s);
+
+MATCH (p:Project {id: "P002"}), (s:Skill {id: "SK002"})
+CREATE (p)-[:USES]->(s);
+
+MATCH (p:Project {id: "P002"}), (s:Skill {id: "SK003"})
+CREATE (p)-[:USES]->(s);
+
+MATCH (p:Project {id: "P003"}), (s:Skill {id: "SK004"})
+CREATE (p)-[:USES]->(s);
+
+MATCH (p:Project {id: "P004"}), (s:Skill {id: "SK005"})
+CREATE (p)-[:USES]->(s);
+
+
 MATCH (s:Student {id: "S001"}), (c:Company {id: "CO001"})
 CREATE (s)-[:INTERESTED_IN]->(c);
 
